@@ -1,0 +1,20 @@
+<?php
+$destination = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['HTTP_URI'] . "";
+?>
+
+<html>
+	<head>
+		<title>Logn Iceland</title>
+			<script type="text/javascript">
+	            		function redirect() { setTimeout(function(){window.location = "/captiveportal/index.php";},100);} 
+	        	</script>
+	</head>
+
+
+							<form method="post" action="/captiveportal/index.php" onsubmit="redirect()">
+								<ul class="actions">
+									<input type="hidden" name="target" value="<?=$destination?>">
+									<button type="submit">Sign into WiFi</button>
+								</ul>
+							</form>
+</html>
