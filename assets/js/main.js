@@ -167,6 +167,29 @@
 
 
 $(".moretips").click(function(){
-	$('.hidden').show();
+	$('.content.hidden').show();
 	$(".moretips").hide(); 
 });
+
+$(document).on('click', "a.seemore", function() {
+	// fix cards
+	var cards = $(this).parent(".content").children(".features").children(".feature"); 
+	cards.toggle();
+	// cards.css("display", "block"); 
+
+	// fix button
+	$(this).html("Hide");
+	$(this).addClass("hidemore"); 
+	$(this).removeClass("seemore");
+})
+
+$(document).on('click', "a.hidemore", function() {
+	// fix cards
+	var cards = $(this).parent(".content").children(".features").children(".feature"); 
+	cards.toggle();
+
+	// fix button 
+	$(this).html("See more");
+	$(this).addClass("seemore"); 
+	$(this).removeClass("hidemore");
+})

@@ -2727,8 +2727,8 @@
 			padding: 1.75em 1.75em 0.1em 1.75em ;
 			background-color: #353849;
 			border-radius: 5px;
-			margin: 1.5em 3em 1.5em 0;
-			width: calc(50% - 1.5em);
+			margin: 0 3em 0 0;
+			width: 40%;
 		}
 
 			.features article:nth-child(2n) {
@@ -3623,7 +3623,7 @@
 
 		.content {
 			margin-top: 1.8em; 
-			margin-bottom: 6.8em; 
+			/*margin-bottom: 6.8em; */
 		}
 
 		@media screen and (max-width: 980px) {
@@ -3916,4 +3916,8 @@ p.moretips:hover {
 
 .hidden {
 	display: none;
+}
+
+.hidemore {
+	margin-bottom: 0px;
 }
