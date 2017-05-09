@@ -2733,7 +2733,7 @@
 		width:100%;
 		overflow-x: auto;
 		overflow-y: hidden;
-		height: 200px;
+		/*height: 200px;*/
 		/*white-space: nowrap;*/
 
 	}
@@ -2806,6 +2806,12 @@
 					margin: 0 1em 2em 0 !important;
 				}
 
+		}
+
+		@media screen and (max-width: 320px) {
+			.features article {
+				min-width: 200px;
+			}
 		}
 
 /* Header */
