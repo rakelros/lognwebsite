@@ -81,8 +81,19 @@
 												<a class="special">Learn more</a>
 											</article>
 											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Nisl placerat</h3>
-                                                                                                <p>KKKKKKKK<p>
+												<h3 class="major">Concerta</h3>
+												<p>
+													<?php
+														#concerts
+														$response = file_get_contents('https://apis.is/concerts');
+														$concerts = json_decode($response, true);
+														$x = 0; #number of upcoming conert, could loop through a bunch if needed
+														echo "Next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
+														echo "<br>";
+														echo "<img src=".$concerts['results'][$x]['imageSource']." alt='Concert picture'>";
+														
+													?>
+												<p>
                                                                                                 <a class="special">Learn more</a>
 											</article>
 											<article class="feature animated fadeInRight hidden">
