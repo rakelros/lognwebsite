@@ -70,7 +70,7 @@
                                                     $response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
                                                     $forecast = json_decode($response, true);
                                                     # "F" = windspeed, "FG" = top wind, "D" = direction of wind, "T" = temperature, "W" = weather disciption, "N" = cloud percentage, "R" = rain amount, more info: http://www.vedur.is/media/vedurstofan/XML-thjonusta.pdf
-                                                    $time = 3;
+                                                    $time = 6;
                                                     echo "The weather in Reykjavík at ".gmdate('H:i, d. M Y',strtotime($forecast['results'][0]['forecast'][$time]['ftime'])).":<br>";
                                                     echo $forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W']);
                                                     echo "<br>with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of rain";
