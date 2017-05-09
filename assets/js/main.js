@@ -167,13 +167,11 @@
 
 
 $(".moretips").click(function(){
-	alert("You clicked on moretips");
 	$('.content.hidden').show();
 	$(".moretips").hide(); 
 });
 
-$(document).on('click', "a.seemore", function() {
-	alert("You clicked on seemore");
+$(".seemore").click(function() {
 	// fix cards
 	var cards = $(this).parent(".content").children(".features").children(".feature"); 
 	// cards.toggle();
@@ -185,8 +183,7 @@ $(document).on('click', "a.seemore", function() {
 	$(this).removeClass("seemore");
 })
 
-$(document).on('click', "a.hidemore", function() {
-	alert("You clicked on hidemore");
+$(".hidemore").click(function() {
 	// fix cards
 	var cards = $(this).parent(".content").children(".features").children(".feature"); 
 	// cards.toggle();
