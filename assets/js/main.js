@@ -174,8 +174,8 @@ $(".moretips").click(function(){
 $(document).on('click', "a.seemore", function() {
 	// fix cards
 	var cards = $(this).parent(".content").children(".features").children(".feature"); 
-	cards.toggle();
-	// cards.css("display", "block"); 
+	// cards.toggle();
+	cards.css("display", "inline-block"); 
 
 	// fix button
 	$(this).html("Hide");
@@ -186,7 +186,8 @@ $(document).on('click', "a.seemore", function() {
 $(document).on('click', "a.hidemore", function() {
 	// fix cards
 	var cards = $(this).parent(".content").children(".features").children(".feature"); 
-	cards.toggle();
+	// cards.toggle();
+	cards.css("display", "none"); 
 
 	// fix button 
 	$(this).html("See more");

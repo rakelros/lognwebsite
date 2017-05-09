@@ -9,6 +9,11 @@
 
 /* Reset */
 
+	html, body {
+		max-width: 100%;
+	    overflow-x: hidden;
+	}
+
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -2721,6 +2726,16 @@
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		margin: 0 0 2em 0;
+
+		flex-flow:row;
+		/*height:100%;*/
+		/*position:absolute;*/
+		width:100%;
+		overflow-x: auto;
+		overflow-y: hidden;
+		height: 200px;
+		/*white-space: nowrap;*/
+
 	}
 
 		.features article {
@@ -2728,10 +2743,14 @@
 			background-color: #353849;
 			border-radius: 5px;
 			margin: 0 3em 0 0;
-			width: 40%;
+			min-width: 310px;
+			max-height: 200px;
+			/*display:inline-block;*/
+			/*flex:1;*/
+			/*-webkit-flex:1;*/
 		}
 
-			.features article:nth-child(2n) {
+			.features article:last-child {
 				margin-right: 0;
 			}
 
@@ -2779,12 +2798,12 @@
 		@media screen and (max-width: 640px) {
 
 			.features {
-				display: block;
+				/*display: block;*/
 			}
 
 				.features article {
 					width: 100%;
-					margin: 0 0 2em 0 !important;
+					margin: 0 1em 2em 0 !important;
 				}
 
 		}
@@ -3920,4 +3939,12 @@ p.moretips:hover {
 
 .hidemore {
 	margin-bottom: 0px;
+}
+
+.seemore:before {
+	content: '\f107' !important;
+}
+
+.hidemore:before {
+	content: '\f106' !important;
 }
