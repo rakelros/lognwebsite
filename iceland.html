@@ -60,91 +60,130 @@
 								<div class="inner">
 									<div class="content animated fadeIn">
 										<h2 class="major">Check for Unexpected Weather</h2>
-										<p>Please check the forcast of the places you travel to for sporatic and rough weather.</p>
-                                                                                <a class="special seemore">See more</a>
+										<p class="contentdesc">Please check the forcast of the places you travel to for sporatic and rough weather.</p>
+                                        <a class="special seemore">See more</a>
 										<div class="features">
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Reykjavík</h3>
-												<p>
-                                                                                                        <?php 
-													#weather
-													$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
-													$forecast = json_decode($response, true);
-													# "F" = windspeed, "FG" = top wind, "D" = direction of wind, "T" = temperature, "W" = weather disciption, "N" = cloud percentage, "R" = rain amount, more info: http://www.vedur.is/media/vedurstofan/XML-thjonusta.pdf
-													$time = 6;
-													echo "The weather in Reykjavík at ".gmdate('H:i, d. M Y',strtotime($forecast['results'][0]['forecast'][$time]['ftime'])).":<br>";
-													echo $forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W']);
-													echo "<br>with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of rain";
-													echo "<br>";
-													?>
-												</p>
-												<a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Reykjavík</span>
+													<p><?php 
+														#weather
+														$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
+														$forecast = json_decode($response, true);
+														# "F" = windspeed, "FG" = top wind, "D" = direction of wind, "T" = temperature, "W" = weather disciption, "N" = cloud percentage, "R" = rain amount, more info: http://www.vedur.is/media/vedurstofan/XML-thjonusta.pdf
+														$time = 6;
+														echo "The weather in Reykjavík at ".gmdate('H:i, d. M Y',strtotime($forecast['results'][0]['forecast'][$time]['ftime'])).":<br>";
+														echo $forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W']);
+														echo "<br>with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of rain";
+														echo "<br>";
+														?></p>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Nisl placerat</h3>
-                                                                                                <p>KKKKKKKK<p>
-                                                                                                <a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Nisl placerat</span>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Nisl placerat</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-												<a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Nisl placerat</span>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Nisl placerat</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-												<a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Nisl placerat</span>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
 										</div>
 									</div>
 									<div class="content animated fadeIn">
 										<h2 class="major">Watch for Dangers on the Road</h2>
-										<p>Please take precautions on the road and keep away from oncoming traffic, animals and weather conditions.</p>
+										<p class="contentdesc">Please take precautions on the road and keep away from oncoming traffic, animals and weather conditions.</p>
 										<a class="special seemore">See more</a>
 										<div class="features">
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Sed feugiat lorem</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-												<a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Nisl placerat</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-												<a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Nisl placerat</span>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
 										</div>
 									</div>
 									<div class="content animated fadeIn hidden">
 										<h2 class="major">Preserve the Natural Environment</h2>
-										<p>Please preserve Icelandic moss as it is delicate and takes hundreds of years to grow back.</p>
+										<p class="contentdesc">Please preserve Icelandic moss as it is delicate and takes hundreds of years to grow back.</p>
 										<a class="special seemore">See more</a>
 										<div class="features">
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Sed feugiat lorem</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-												<a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Nisl placerat</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-												<a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Nisl placerat</span>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
 										</div>
 									</div>
 									<div class="content animated fadeIn hidden">
 										<h2 class="major">Don't Hesitate to Ask Locals</h2>
-										<p>Please ask locals for help and information about Iceland throughout your stay.</p>
+										<p class="contentdesc">Please ask locals for help and information about Iceland throughout your stay.</p>
 										<a class="special seemore">See more</a>
 										<div class="features">
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Sed feugiat lorem</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-												<a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
-											<article class="feature animated fadeInRight hidden">
-												<h3 class="major">Nisl placerat</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-												<a class="special">Learn more</a>
+											<article class="card small animated fadeInRight hidden">
+												<div class="card-content">
+													<span class="card-title activator grey-text text-darken-4">Nisl placerat</span>
+												</div>
+												<div class="card-action">
+													<a href="#">This is a link</a>
+													<a href="#">This is a link</a>
+												</div>
 											</article>
 										</div>
 									</div>
