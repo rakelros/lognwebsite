@@ -62,22 +62,7 @@
 									<div class="content animated fadeIn">
 										<h2 class="major">Check for Unexpected Weather</h2>
 										<p>Please check the forcast of the places you travel to for sporatic and rough weather.</p>
-										<?php 
-										$response = file_get_contents('https://apis.is/currency/lb'); # /currency/{m5,arion,lb}, {m5.is, arionbanki, landsbanki}
-										$currency = json_decode($response, true);
-										echo '<select id="curr" name="curr">';
-										echo '<option value="0">Currency</option>';
-										echo '<option value="USD">USD</option>';
-										echo '<option value="CAD">CAD</option>';
-										echo '<option value="DKK">DKK</option>';
-										echo '</select>';
-										if($_POST['submit'] && $_POST['submit'] != 0)
-										{
-										   $curr=$_POST['submit'];
-										   echo $curr;
-										}
-										?>
-                                                                                <a class="special seemore">See more</a>
+										<a class="special seemore">See more</a>
 										<div class="features">
 											<article class="feature animated fadeInRight hidden">
 												<h3 class="major">Reykjavík</h3>
