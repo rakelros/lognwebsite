@@ -72,8 +72,8 @@
 											echo $forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W']);
 											echo " with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of rain";
 											echo "		</p>"; 
-											echo "	</div>"
-											echo "</article>"
+											echo "	</div>";
+											echo "</article>";
 										?>
 										<!-- sim card --><article class="card small animated fadeInRight">
 											<div class="card-content">
