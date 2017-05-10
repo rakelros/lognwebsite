@@ -45,7 +45,7 @@ echo '<option value="DKK">DKK</option>';
 echo '</select>';
 if($_POST['submit'] && $_POST['submit'] != 0)
 {
-   $curr=$_POST['curr'];
+   $curr=$_POST['submit'];
    echo $curr;
 }
 
