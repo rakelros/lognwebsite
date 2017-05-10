@@ -171,7 +171,29 @@ $(".moretips").click(function(){
 	$(".moretips").hide(); 
 });
 
-$(".seemore").click(function() {
+// $(".seemore").click(function() {
+// 	// fix cards
+// 	var cards = $(this).parent(".content").children(".features").children(".card"); 
+// 	cards.css("display", "inline-block"); 
+
+// 	// fix button
+// 	$(this).html("Hide");
+// 	$(this).addClass("hidemore"); 
+// 	$(this).removeClass("seemore");
+// })
+
+// $(".hidemore").click(function() {
+// 	// fix cards
+// 	var cards = $(this).parent(".content").children(".features").children(".card"); 
+// 	cards.css("display", "none"); 
+
+// 	// fix button 
+// 	$(this).html("See more");
+// 	$(this).addClass("seemore"); 
+// 	$(this).removeClass("hidemore");
+// })
+
+$(document).on('click', "a.seemore", function() {
 	// fix cards
 	var cards = $(this).parent(".content").children(".features").children(".card"); 
 	cards.css("display", "inline-block"); 
@@ -181,8 +203,7 @@ $(".seemore").click(function() {
 	$(this).addClass("hidemore"); 
 	$(this).removeClass("seemore");
 })
-
-$(".hidemore").click(function() {
+$(document).on('click', "a.hidemore", function() {
 	// fix cards
 	var cards = $(this).parent(".content").children(".features").children(".card"); 
 	cards.css("display", "none"); 
