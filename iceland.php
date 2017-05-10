@@ -1,5 +1,11 @@
 <?php # $destination = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['HTTP_URI'] . ""; ?>
 <?php # $destination = "http://lognweb.herokuapp.com/iceland.html"; ?>
+<?php
+# prevent cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
 <!-- <!DOCTYPE HTML> -->
 <!--
 	Solid State by HTML5 UP
@@ -63,14 +69,13 @@
 										 <?php 
 										 	$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
 											$forecast = json_decode($response, true);
-											$time = 6;
-										 	echo '<article class="card small animated fadeInRight" style="background: url() cover;">';
+											$time = 6;  # hom many entries into the future
+											$image = "/assets/weather/small.png";
+										 	echo '<article class="card small animated fadeInRight" style="background: url("'.$image.'") cover;">';
 											echo '	<div class="card-content">';
 											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
 											echo '		<p>';
-											echo "			The forcast for ".gmdate('H:i',strtotime($forecast['results'][0]['forecast'][$time]['ftime']))." today is ";
-											echo $forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W']);
-											echo " with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of rain";
+											echo "			The forcast for ".gmdate('H:i',strtotime($forecast['results'][0]['forecast'][$time]['ftime']))." today is ".$forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W'])." with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of precipitation";
 											echo "		</p>"; 
 											echo "	</div>";
 											echo "</article>";
