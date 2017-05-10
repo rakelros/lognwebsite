@@ -13,12 +13,16 @@ echo '</select><br>Enter Amount:<input type="text" name="amount"><br>';
 echo '<input type="submit" name="submit" value="Convert Now"></center>';
 
 if(isset($_POST['submit'])){
-	
+	$x = 0;
+	$value = 0;
 	$amount = $_POST['amount'];
 	$curr = $_POST['curr'];
-	$value = 102.5;
+	foreach ($currency['results'] as $nr){
+		
+		
+	}
 	
-	echo $value*$amount;
+	echo "<br>".$amount." ".$curr." is ".$value*$amount." Icelandic kronas<br>";
 }
 
 
