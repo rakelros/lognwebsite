@@ -55,149 +55,185 @@
 				<!-- Wrapper -->
 					<section id="wrapper">
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<div class="content animated fadeIn">
-										<h2 class="major">Check for Unexpected Weather</h2>
-										<p class="contentdesc">Please check the forcast of the places you travel to for sporatic and rough weather.</p>
-										<a class="special seemore">See more</a>
-										<div class="features">
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-													<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>
-													<p><?php 
-														#weather
-														$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
-														$forecast = json_decode($response, true);
-														# "F" = windspeed, "FG" = top wind, "D" = direction of wind, "T" = temperature, "W" = weather disciption, "N" = cloud percentage, "R" = rain amount, more info: http://www.vedur.is/media/vedurstofan/XML-thjonusta.pdf
-														$time = 6;
-														echo "The weather in Reykjavík at ".gmdate('H:i, d. M Y',strtotime($forecast['results'][0]['forecast'][$time]['ftime'])).":<br>";
-														echo $forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W']);
-														echo "<br>with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of rain";
-														echo "<br>";
-														?></p>
-												</div>
-												<div class="card-action">
-													<a href="#">Advert link</a>
-													<a href="#">Advert link</a>
-												</div>
-											</article>
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-														<span class="card-title activator grey-text text-darken-4">Concerta</span>
-														<p>
-															<?php
-															#concerts
-															$response = file_get_contents('https://apis.is/concerts');
-															$concerts = json_decode($response, true);
-															$x = 0; #number of upcoming conert, could loop through a bunch if needed
-															echo "Next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
-															echo "<br>";
-															echo "<img src=".$concerts['results'][$x]['imageSource']." alt='Concert picture'>";
-															?>
-														</p>
-													</div>
-													<div class="card-action">
-														<a href="#">Advert>
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-													<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
-												</div>
-												<div class="card-action">
-													<a href="#">Advert link</a>
-													<a href="#">Advert link</a>
-												</div>
-											</article>
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-													<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
-												</div>
-												<div class="card-action">
-													<a href="#">Advert link</a>
-													<a href="#">Advert link</a>
-												</div>
-											</article>
-										</div>
+						<section id="one" class="wrapper spotlight style1">
+							<div class="inner">
+								<div class="content animated fadeIn">
+									<div class="features">
+										<!-- weather -->
+										 <?php 
+										 	$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
+											$forecast = json_decode($response, true);
+											$time = 6;
+										 	echo '<article class="card small animated fadeInRight" style="background: url() cover;">';
+											echo '	<div class="card-content">';
+											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
+											echo '		<p>';
+											echo "			The forcast for ".gmdate('H:i',strtotime($forecast['results'][0]['forecast'][$time]['ftime']))." today is ";
+											echo $forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W']);
+											echo " with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of rain";
+											echo "		</p>"; 
+											echo "	</div>"
+											echo "</article>"
+										?>
+										<!-- sim card --><article class="card small animated fadeInRight">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>	
+										<!-- currency --><article class="card small animated fadeInRight">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>										
 									</div>
-									<div class="content animated fadeIn">
-										<h2 class="major">Watch for Dangers on the Road</h2>
-										<p class="contentdesc">Please take precautions on the road and keep away from oncoming traffic, animals and weather conditions.</p>
-										<a class="special seemore">See more</a>
-										<div class="features">
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-													<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
-												</div>
-												<div class="card-action">
-													<a href="#">Advert link</a>
-													<a href="#">Advert link</a>
-												</div>
-											</article>
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-													<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
-												</div>
-												<div class="card-action">
-													<a href="#">Advert link</a>
-													<a href="#">Advert link</a>
-												</div>
-											</article>
-										</div>
-									</div>
-									<div class="content animated fadeIn hidden">
-										<h2 class="major">Preserve the Natural Environment</h2>
-										<p class="contentdesc">Please preserve Icelandic moss as it is delicate and takes hundreds of years to grow back.</p>
-										<a class="special seemore">See more</a>
-										<div class="features">
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-													<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
-												</div>
-												<div class="card-action">
-													<a href="#">Advert link</a>
-													<a href="#">Advert link</a>
-												</div>
-											</article>
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-													<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
-												</div>
-												<div class="card-action">
-													<a href="#">Advert link</a>
-													<a href="#">Advert link</a>
-												</div>
-											</article>
-										</div>
-									</div>
-									<div class="content animated fadeIn hidden">
-										<h2 class="major">Don't Hesitate to Ask Locals</h2>
-										<p class="contentdesc">Please ask locals for help and information about Iceland throughout your stay.</p>
-										<a class="special seemore">See more</a>
-										<div class="features">
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-													<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
-												</div>
-												<div class="card-action">
-													<a href="#">Advert link</a>
-													<a href="#">Advert link</a>
-												</div>
-											</article>
-											<article class="card small animated fadeInRight hidden">
-												<div class="card-content">
-													<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
-												</div>
-												<div class="card-action">
-													<a href="#">Advert link</a>
-													<a href="#">Advert link</a>
-												</div>
-											</article>
-										</div>
-									</div>
-									<p class="moretips">... More Tips ...</p>
 								</div>
-							</section>
+
+								<div class="content animated fadeIn">
+									<h2 class="major">Check for Unexpected Weather</h2>
+									<p class="contentdesc">Please check the forcast of the places you travel to for sporatic and rough weather.</p>
+									<a class="special seemore">See more</a>
+									<div class="features">
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>
+												<p><?php 
+													#weather
+													$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
+													$forecast = json_decode($response, true);
+													# "F" = windspeed, "FG" = top wind, "D" = direction of wind, "T" = temperature, "W" = weather disciption, "N" = cloud percentage, "R" = rain amount, more info: http://www.vedur.is/media/vedurstofan/XML-thjonusta.pdf
+													$time = 6;
+													echo "The forcast for ".gmdate('H:i',strtotime($forecast['results'][0]['forecast'][$time]['ftime']))." today is ";
+													echo $forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W']);
+													echo " with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of rain";
+													?>
+												</p>
+											</div>
+										</article>
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">Concerta</span>
+												<p>
+													<?php
+													#concerts
+													$response = file_get_contents('https://apis.is/concerts');
+													$concerts = json_decode($response, true);
+													$x = 0; #number of upcoming conert, could loop through a bunch if needed
+													echo "Next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
+													echo "<br>";
+													echo "<img src=".$concerts['results'][$x]['imageSource']." alt='Concert picture'>";
+													?>
+												</p>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert></a>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="content animated fadeIn">
+									<h2 class="major">Watch for Dangers on the Road</h2>
+									<p class="contentdesc">Please take precautions on the road and keep away from oncoming traffic, animals and weather conditions.</p>
+									<a class="special seemore">See more</a>
+									<div class="features">
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="content animated fadeIn hidden">
+									<h2 class="major">Preserve the Natural Environment</h2>
+									<p class="contentdesc">Please preserve Icelandic moss as it is delicate and takes hundreds of years to grow back.</p>
+									<a class="special seemore">See more</a>
+									<div class="features">
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="content animated fadeIn hidden">
+									<h2 class="major">Don't Hesitate to Ask Locals</h2>
+									<p class="contentdesc">Please ask locals for help and information about Iceland throughout your stay.</p>
+									<a class="special seemore">See more</a>
+									<div class="features">
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>
+										<article class="card small animated fadeInRight hidden">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
+											</div>
+											<div class="card-action">
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
+											</div>
+										</article>
+									</div>
+								</div>
+								<p class="moretips">... More Tips ...</p>
+							</div>
+						</section>
 
 					</section>
 
