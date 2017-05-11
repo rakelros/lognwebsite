@@ -80,22 +80,24 @@ header("Pragma: no-cache");
 											echo "	</div>";
 											echo "</article>";
 										?>
-										<!-- sim card --><article class="card small animated fadeInRight" style="background-image: url('./images/coverage.png');">
+										<!-- sim card --><article class="card small animated fadeInRight" style="background-image: url('./images/coverage.png'); background-size: cover;">
 											<div class="card-content">
 												<span class="card-title activator grey-text text-darken-4">Best phone coverage</span>
 											</div>
-											<div class="card-action">
+											<div class="card-action" style="background-color: transparent;">
 												<a href="http://siminn.is">siminn.is</a>
-												<a href="#">Advert link</a>
 											</div>
 										</article>	
 										<!-- currency --><article class="card small animated fadeInRight">
 											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
+												<span class="card-title activator grey-text text-darken-4">Currency Conversion</span>
+												<!-- IS THERE SOME WAY YOU CAN DO THIS? -->
+												<p>Your country: 1CAD<br>Iceland: 80ISK</p>
+												<p>Iceland: 1IDK<br>Your country: 5CAD</p>
+												<!-- PLEASE PLEASE AND THNAK YOU :D -->
 											</div>
 											<div class="card-action">
-												<a href="#">Advert link</a>
-												<a href="#">Advert link</a>
+												<a href="#">Currency conversion</a>
 											</div>
 										</article>										
 									</div>
@@ -108,39 +110,27 @@ header("Pragma: no-cache");
 									<div class="features">
 										<article class="card small animated fadeInRight hidden">
 											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>
-												<p><?php 
-													#weather
-													$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
-													$forecast = json_decode($response, true);
-													# "F" = windspeed, "FG" = top wind, "D" = direction of wind, "T" = temperature, "W" = weather disciption, "N" = cloud percentage, "R" = rain amount, more info: http://www.vedur.is/media/vedurstofan/XML-thjonusta.pdf
-													$time = 6;
-													echo "The forcast for ".gmdate('H:i',strtotime($forecast['results'][0]['forecast'][$time]['ftime']))." today is ";
-													echo $forecast['results'][0]['forecast'][$time]['T']." °C, ".$forecast['results'][0]['forecast'][$time]['F']." m/s and ".strtolower($forecast['results'][0]['forecast'][$time]['W']);
-													echo " with ".$forecast['results'][0]['forecast'][$time]['R']." mm/hour of rain";
-													?>
-												</p>
-											</div>
-										</article>
-										<article class="card small animated fadeInRight hidden">
-											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">Concerta</span>
-												<p>
-													<?php
-													#concerts
-													$response = file_get_contents('https://apis.is/concerts');
-													$concerts = json_decode($response, true);
-													$x = 0; #number of upcoming conert, could loop through a bunch if needed
-													echo "Next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
-													echo "<br>";
-													echo "<img src=".$concerts['results'][$x]['imageSource']." alt='Concert picture'>";
-													?>
-												</p>
+												<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
 											</div>
 											<div class="card-action">
-												<a href="#">Advert></a>
+												<a href="#">Advert link</a>
+												<a href="#">Advert link</a>
 											</div>
 										</article>
+										<!-- weather -->
+										 <?php 
+										 	$response = file_get_contents('https://apis.is/concerts');
+											$concerts = json_decode($response, true);
+											$x = 0; #num upcoming conert
+										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\');">';
+											echo '	<div class="card-content">';
+											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
+											echo '		<p>';
+											echo "			Fun thing to do indoors! The next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
+											echo "		</p>"; 
+											echo "	</div>";
+											echo "</article>";
+										?>
 									</div>
 								</div>
 								<div class="content animated fadeIn">
@@ -150,7 +140,7 @@ header("Pragma: no-cache");
 									<div class="features">
 										<article class="card small animated fadeInRight hidden">
 											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
+												<span class="card-title activator grey-text text-darken-4">This is not an ad :D</span>
 											</div>
 											<div class="card-action">
 												<a href="#">Advert link</a>
