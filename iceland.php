@@ -145,6 +145,9 @@ header("Pragma: no-cache");
 										<!-- currency --><article class="card small animated fadeInRight">
 											<div class="card-content">
 												<span class="card-title activator grey-text text-darken-4">Currency Conversion</span>
+												<input type="text" id="ISK" size="5" value="0" onchange="iskfunc()" />
+												<label for="ISK"> ISK </label> 
+												<br>
 												<input type="text" id="GBP" size="5" value="0" onchange="gbpfunc()"/>
 												<label for="GBP"> GBP </label>
 												</br>
@@ -157,8 +160,7 @@ header("Pragma: no-cache");
 												<input type="text" id="CAD" size="5" value="0" onchange="cadfunc()" />
 												<label for="CAD"> CAD </label>
 												</br>
-												<input type="text" id="ISK" size="5" value="0" onchange="iskfunc()" />
-												<label for="ISK"> ISK </label>  												
+												 												
 											</div>
 											<!-- 
 											<div class="card-action" style="background-color: transparent;">
