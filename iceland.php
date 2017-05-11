@@ -196,12 +196,12 @@ header("Pragma: no-cache");
 											$concerts = json_decode($response, true);
 											$x = 0; #num upcoming conert
 										 	echo '<article class="card small animated fadeInRight hidden" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\'); background-size: cover;">';
-											echo '	<div class="card-content">';
-											echo '		<span class="card-title activator grey-text text-darken-4">Concerts!</span>';
-											echo '		<p>';
-											echo "			Fun thing to do indoors! The next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
-											echo "		</p>"; 
-											echo "	</div>";
+											echo '<div class="card-content">';
+											echo '<span class="card-title activator grey-text text-darken-4">Concerts!</span>';
+											echo '<p>';
+											echo "Fun thing to do indoors! The next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
+											echo "</p>"; 
+											echo "</div>";
 											echo "</article>";
 										?>
 									</div>
@@ -256,10 +256,10 @@ header("Pragma: no-cache");
 									<div class="features">
 										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/aurora.jpg'); background-size: cover;">
 											<div class="card-content">
-																							<a href="//re.is/day-tours/northern-lights-tour" target="_blank"><span class="card-title activator grey-text text-darken-4">See the northern lights</span></a>
+												<a href="//re.is/day-tours/northern-lights-tour" target="_blank"><span class="card-title activator grey-text text-darken-4">See the northern lights</span></a>
 											</div>
-											<p>
-												<br>
+											<p style="vertical-align: text-bottom;">
+												
 												<a href="//re.is/day-tours/northern-lights-tour" target="_blank">Bus tour with Reykjavik Excursions</a>
 											<p>
 										</article>
