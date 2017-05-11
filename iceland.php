@@ -139,12 +139,14 @@ header("Pragma: no-cache");
 												<span class="card-title activator grey-text text-darken-4">Best phone coverage</span>
 											</div>
 												<p>
-													<br>
-													<a href="http://siminn.is" target="_blank">siminn.is</a>
+													<div style="vertical-align: bottom;">
+														<a href="http://siminn.is" target="_blank">Get a SIM card from Síminn</a>
+													</div>
 												</p>
 										</article>	
-										<!-- currency --><article class="card small animated fadeInRight">
-														<div class="card-content row">
+										<!-- currency -->
+										<article class="card small animated fadeInRight">
+											<div class="card-content row">
 												<span class="card-title activator grey-text text-darken-4">Currency Conversion</span>
 												<div class="">
 													<input type="text" id="ISK" size="5" value="0" onchange="iskfunc()" />
@@ -178,7 +180,7 @@ header("Pragma: no-cache");
 								</div>
 								<div class="content animated fadeIn">
 									<h2 class="major">Check for Unexpected Weather</h2>
-									<p class="contentdesc">Please check the forcast of the places you travel to for sporatic and rough weather.</p>
+									<p class="contentdesc">Please check the forecast of the places you travel to for sporatic and rough weather.</p>
 									<a class="special seemore">See more</a>
 									<div class="features">
 										<article class="card small animated fadeInRight hidden">
@@ -216,7 +218,8 @@ header("Pragma: no-cache");
 												<span class="card-title activator grey-text text-darken-4">Use the safest cars</span>
 											</div>
 											<p>
-												<br>
+												<div style="vertical-align: bottom;"><a href="//avis.is/" target="_blank">Rent a car from Avis</a>
+											</div>
 
 											</p>
 										</article>
