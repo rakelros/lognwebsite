@@ -300,7 +300,7 @@ header("Pragma: no-cache");
 							</form>
 							<ul class="copyright">
 								<li>To add your tips and your business to Logn, contact us at <a target="_blank" href="https://lognweb.herokuapp.com">logn.com</a></li>
-								<li>&copy; Logn Inc. All rights reserved. Design: <a target="_blank" href="http://html5up.net">HTML5 UP</a>. Mods: <a target="_blank" href="www.arjunkalburgi.com">ASKalburgi</a></li>
+								<li>&copy; Logn All rights reserved. Design: <a target="_blank" href="http://html5up.net">HTML5 UP</a>. Mods: <a target="_blank" href="www.arjunkalburgi.com">ASKalburgi</a></li>
 							</ul>
 						</div>
 					</section>
