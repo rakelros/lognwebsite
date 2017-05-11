@@ -293,7 +293,7 @@ header("Pragma: no-cache");
 							<form method="post" action="/captiveportal/index.php" onsubmit="redirect()">
 								<ul class="actions">
 									<?php echo '<input type="hidden" name="target" value="'.$destination.'">';?>
-									<button type="submit">Wunderbar</button>
+									<button type="submit">Connect to internet</button>
 								</ul>
 							</form>
 							<ul class="copyright">
