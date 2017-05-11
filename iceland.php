@@ -70,8 +70,8 @@ header("Pragma: no-cache");
 										 	$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
 											$forecast = json_decode($response, true);
 											$time = 6;  # hom many entries into the future
-											$image = "/assets/weather/small.png";
-										 	echo '<article class="card small animated fadeInRight" style="background: url("'.$image.'") cover;">';
+											$image = "./assets/weather/small.png";
+										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$image.'\');">';
 											echo '	<div class="card-content">';
 											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
 											echo '		<p>';
@@ -82,10 +82,11 @@ header("Pragma: no-cache");
 										?>
 										<!-- sim card --><article class="card small animated fadeInRight">
 											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
+												<span class="card-title activator grey-text text-darken-4">Best phone coverage</span>
 											</div>
+											<img src="./images/coverage.png" style="width:100%;height:100%;">
 											<div class="card-action">
-												<a href="#">Advert link</a>
+												<a href="http://siminn.is">siminn.is</a>
 												<a href="#">Advert link</a>
 											</div>
 										</article>	
