@@ -193,6 +193,16 @@ header("Pragma: no-cache");
 												</div>
 											</p>
 										</article>
+										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/kaffibolli.jpg'); background-size: cover;">
+											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4" style="color:black;">Are you cold?</span>
+											</div>
+											<p>
+												<div style="vertical-align: bottom;">
+													<a href="//kaffibrennslan101.is" target="_blank"  style="color:black;">Come inside and get a coffee</a>
+												</div>
+											</p>
+										</article>
 									</div>
 								</div>
 								<div class="content animated fadeIn">
