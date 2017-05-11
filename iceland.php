@@ -15,7 +15,7 @@ header("Pragma: no-cache");
 <html>
 	<head>
 		<title>Logn Iceland</title>
-		<script type="text/javascript">
+			<script type="text/javascript">
             		function redirect() { setTimeout(function(){window.location = "/captiveportal/index.php";},100);} 
         	</script>
 		<meta charset="utf-8" />
@@ -25,8 +25,62 @@ header("Pragma: no-cache");
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript">
+		var gbp, usd, eur, cad, isk;
+		function init()
+		{
+			gbp = document.getElementById("GBP");
+			usd = document.getElementById("USD");
+			eur = document.getElementById("EUR");
+			cad = document.getElementById("CAD");
+			isk = document.getElementById("ISK");
+		}
+
+		function gbpfunc()
+		{
+			usd.value = parseFloat(gbp.value) * 1.2928;
+			eur.value = parseFloat(gbp.value) * 1.1888;
+			cad.value = parseFloat(gbp.value) * 1.7756;
+			isk.value = parseFloat(gbp.value) * 136.8;
+		}
+
+		function eurfunc()
+		{
+			gbp.value = parseFloat(eur.value) * 0.8412;
+			usd.value = parseFloat(eur.value) * 1.0875;
+			cad.value = parseFloat(eur.value) * 1.4937;
+			isk.value = parseFloat(eur.value) * 115;
+		}
+
+		function cadfunc()
+		{
+			gbp.value = parseFloat(cad.value) * 0.563;
+			usd.value = parseFloat(cad.value) * 0.728;
+			eur.value = parseFloat(cad.value) * 0.669;
+			isk.value = parseFloat(cad.value) * 77.5;
+		}
+
+		function iskfunc()
+		{
+			gbp.value = parseFloat(isk.value) * 0.00731;
+			usd.value = parseFloat(isk.value) * 0.00945;
+			eur.value = parseFloat(isk.value) * 0.00869;
+			cad.value = parseFloat(isk.value) * 0.0129;    
+		}
+
+		function usdfunc()
+		{
+			gbp.value = parseFloat(usd.value) * 0.773;
+			eur.value = parseFloat(usd.value) * 0.919;
+			cad.value = parseFloat(usd.value) * 1.373;
+			isk.value = parseFloat(usd.value) * 105.7;
+		}
+		
+		init();
+
+		</script>
 	</head>
-	<body>
+	<body onload="init()">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -91,18 +145,29 @@ header("Pragma: no-cache");
 										<!-- currency --><article class="card small animated fadeInRight">
 											<div class="card-content">
 												<span class="card-title activator grey-text text-darken-4">Currency Conversion</span>
-												<!-- IS THERE SOME WAY YOU CAN DO THIS? -->
-												<p>Your country: 1CAD<br>Iceland: 80ISK</p>
-												<p>Iceland: 1IDK<br>Your country: 5CAD</p>
-												<!-- PLEASE PLEASE AND THNAK YOU :D -->
+												<input type="text" id="GBP" size="5" value="0" onchange="gbpfunc()"/>
+												<label for="GBP"> GBP </label>
+												</br>
+												<input type="text" id="USD" size="5" value="0" onchange="usdfunc()" />
+												<label for="USD"> USD </label>
+												</br>
+												<input type="text" id="EUR" size="5" value="0" onchange="eurfunc()" />
+												<label for="EUR"> EUR </label>
+												</br>
+												<input type="text" id="CAD" size="5" value="0" onchange="cadfunc()" />
+												<label for="CAD"> CAD </label>
+												</br>
+												<input type="text" id="ISK" size="5" value="0" onchange="iskfunc()" />
+												<label for="ISK"> ISK </label>  												
 											</div>
+											<!-- 
 											<div class="card-action" style="background-color: transparent;">
 												<a href="#">Currency conversion</a>
 											</div>
+											-->
 										</article>										
 									</div>
 								</div>
-
 								<div class="content animated fadeIn">
 									<h2 class="major">Check for Unexpected Weather</h2>
 									<p class="contentdesc">Please check the forcast of the places you travel to for sporatic and rough weather.</p>
