@@ -1,5 +1,5 @@
 <?php # $destination = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['HTTP_URI'] . ""; ?>
-<?php # $destination = "http://lognweb.herokuapp.com/iceland.html"; ?>
+<?php  $destination = "http://lognweb.herokuapp.com/iceland.html"; ?>
 <?php
 # prevent cache
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
@@ -15,7 +15,7 @@ header("Pragma: no-cache");
 <html>
 	<head>
 		<title>Logn Iceland</title>
-		<script type="text/javascript">
+			<script type="text/javascript">
             		function redirect() { setTimeout(function(){window.location = "/captiveportal/index.php";},100);} 
         	</script>
 		<meta charset="utf-8" />
@@ -25,8 +25,62 @@ header("Pragma: no-cache");
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript">
+		var gbp, usd, eur, cad, isk;
+		function init()
+		{
+			gbp = document.getElementById("GBP");
+			usd = document.getElementById("USD");
+			eur = document.getElementById("EUR");
+			cad = document.getElementById("CAD");
+			isk = document.getElementById("ISK");
+		}
+
+		function gbpfunc()
+		{
+			usd.value = parseFloat(gbp.value) * 1.2928;
+			eur.value = parseFloat(gbp.value) * 1.1888;
+			cad.value = parseFloat(gbp.value) * 1.7756;
+			isk.value = parseFloat(gbp.value) * 136.8;
+		}
+
+		function eurfunc()
+		{
+			gbp.value = parseFloat(eur.value) * 0.8412;
+			usd.value = parseFloat(eur.value) * 1.0875;
+			cad.value = parseFloat(eur.value) * 1.4937;
+			isk.value = parseFloat(eur.value) * 115;
+		}
+
+		function cadfunc()
+		{
+			gbp.value = parseFloat(cad.value) * 0.563;
+			usd.value = parseFloat(cad.value) * 0.728;
+			eur.value = parseFloat(cad.value) * 0.669;
+			isk.value = parseFloat(cad.value) * 77.5;
+		}
+
+		function iskfunc()
+		{
+			gbp.value = parseFloat(isk.value) * 0.00731;
+			usd.value = parseFloat(isk.value) * 0.00945;
+			eur.value = parseFloat(isk.value) * 0.00869;
+			cad.value = parseFloat(isk.value) * 0.0129;    
+		}
+
+		function usdfunc()
+		{
+			gbp.value = parseFloat(usd.value) * 0.773;
+			eur.value = parseFloat(usd.value) * 0.919;
+			cad.value = parseFloat(usd.value) * 1.373;
+			isk.value = parseFloat(usd.value) * 105.7;
+		}
+		
+		init();
+
+		</script>
 	</head>
-	<body>
+	<body onload="init()">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -70,7 +124,7 @@ header("Pragma: no-cache");
 										 	$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
 											$forecast = json_decode($response, true);
 											$time = 6;  # hom many entries into the future
-											$image = "./assets/weather/small.png";
+											$image = "./assets/weather/cloudy.png";
 										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$image.'\');">';
 											echo '	<div class="card-content">';
 											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
@@ -85,24 +139,42 @@ header("Pragma: no-cache");
 												<span class="card-title activator grey-text text-darken-4">Best phone coverage</span>
 											</div>
 											<div class="card-action" style="background-color: transparent;">
-												<a href="http://siminn.is">siminn.is</a>
+												<a href="http://siminn.is" target="_blank">siminn.is</a>
 											</div>
 										</article>	
 										<!-- currency --><article class="card small animated fadeInRight">
-											<div class="card-content">
+											<div class="card-content row">
 												<span class="card-title activator grey-text text-darken-4">Currency Conversion</span>
-												<!-- IS THERE SOME WAY YOU CAN DO THIS? -->
-												<p>Your country: 1CAD<br>Iceland: 80ISK</p>
-												<p>Iceland: 1IDK<br>Your country: 5CAD</p>
-												<!-- PLEASE PLEASE AND THNAK YOU :D -->
+												<div class="">
+													<input type="text" id="ISK" size="5" value="0" onchange="iskfunc()" />
+													<label for="ISK"> ISK </label> 
+												</div>
+												<div class="">
+													<input type="text" id="GBP" size="5" value="0" onchange="gbpfunc()"/>
+													<label for="GBP"> GBP </label>
+												</div>
+												<div class="">
+													<input type="text" id="USD" size="5" value="0" onchange="usdfunc()" />
+													<label for="USD"> USD </label>
+												</div>
+												<div class="">
+													<input type="text" id="EUR" size="5" value="0" onchange="eurfunc()" />
+													<label for="EUR"> EUR </label>
+												</div>
+												<div class="">
+													<input type="text" id="CAD" size="5" value="0" onchange="cadfunc()" />
+													<label for="CAD"> CAD </label>
+												</div>
+
 											</div>
-											<div class="card-action">
+											<!-- 
+											<div class="card-action" style="background-color: transparent;">
 												<a href="#">Currency conversion</a>
 											</div>
+											-->
 										</article>										
 									</div>
 								</div>
-
 								<div class="content animated fadeIn">
 									<h2 class="major">Check for Unexpected Weather</h2>
 									<p class="contentdesc">Please check the forcast of the places you travel to for sporatic and rough weather.</p>
@@ -110,8 +182,7 @@ header("Pragma: no-cache");
 									<div class="features">
 										<article class="card small animated fadeInRight hidden">
 											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">This is an AD :D</span>
-												<p>BUY WARM CLOTHES</p>
+												<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
 											</div>
 											<div class="card-action">
 												<a href="#">Advert link</a>
@@ -123,9 +194,9 @@ header("Pragma: no-cache");
 										 	$response = file_get_contents('https://apis.is/concerts');
 											$concerts = json_decode($response, true);
 											$x = 0; #num upcoming conert
-										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\');">';
+										 	echo '<article class="card small animated fadeInRight hidden" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\');">';
 											echo '	<div class="card-content">';
-											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
+											echo '		<span class="card-title activator grey-text text-darken-4">Concerts!</span>';
 											echo '		<p>';
 											echo "			Fun thing to do indoors! The next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
 											echo "		</p>"; 

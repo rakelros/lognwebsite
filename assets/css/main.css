@@ -2738,27 +2738,27 @@
 	}
 
 	/* Let's get this party started */
-	.features::-webkit-scrollbar {
+	.features::-webkit-scrollbar, .card-content::-webkit-scrollbar {
 	    width: 2px;
 	    height: 9px;
 	    margin-top: 10px; 
 	}
 	 
 	/* Track */
-	.features::-webkit-scrollbar-track {
+	.features::-webkit-scrollbar-track, .card-content::-webkit-scrollbar-track {
 	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 	    -webkit-border-radius: 10px;
 	    border-radius: 10px;
 	}
 	 
 	/* Handle */
-	.features::-webkit-scrollbar-thumb {
+	.features::-webkit-scrollbar-thumb, .card-content::-webkit-scrollbar-thumb {
 	    -webkit-border-radius: 10px;
 	    border-radius: 10px;
 	    background: rgba(255,255,255,0.4); 
 	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 	}
-	.features::-webkit-scrollbar-thumb:window-inactive {
+	.features::-webkit-scrollbar-thumb:window-inactive, .card-content::-webkit-scrollbar-thumb:window-inactive {
 		background: rgba(255,255,255,0.4); 
 	}
 
@@ -2887,7 +2887,7 @@
 
 	.card.small .card-content, .card.medium .card-content, .card.large .card-content {
 	  max-height: 100%;
-	  overflow: hidden;
+	  overflow: auto;
 	}
 
 	.card.small .card-action, .card.medium .card-action, .card.large .card-action {

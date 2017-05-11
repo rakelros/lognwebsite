@@ -143,24 +143,29 @@ header("Pragma: no-cache");
 											</div>
 										</article>	
 										<!-- currency --><article class="card small animated fadeInRight">
-											<div class="card-content">
+											<div class="card-content row">
 												<span class="card-title activator grey-text text-darken-4">Currency Conversion</span>
-												<input type="text" id="ISK" size="5" value="0" onchange="iskfunc()" />
-												<label for="ISK"> ISK </label> 
-												<br>
-												<input type="text" id="GBP" size="5" value="0" onchange="gbpfunc()"/>
-												<label for="GBP"> GBP </label>
-												</br>
-												<input type="text" id="USD" size="5" value="0" onchange="usdfunc()" />
-												<label for="USD"> USD </label>
-												</br>
-												<input type="text" id="EUR" size="5" value="0" onchange="eurfunc()" />
-												<label for="EUR"> EUR </label>
-												</br>
-												<input type="text" id="CAD" size="5" value="0" onchange="cadfunc()" />
-												<label for="CAD"> CAD </label>
-												</br>
-												 												
+												<div class="">
+													<input type="text" id="ISK" size="5" value="0" onchange="iskfunc()" />
+													<label for="ISK"> ISK </label> 
+												</div>
+												<div class="">
+													<input type="text" id="GBP" size="5" value="0" onchange="gbpfunc()"/>
+													<label for="GBP"> GBP </label>
+												</div>
+												<div class="">
+													<input type="text" id="USD" size="5" value="0" onchange="usdfunc()" />
+													<label for="USD"> USD </label>
+												</div>
+												<div class="">
+													<input type="text" id="EUR" size="5" value="0" onchange="eurfunc()" />
+													<label for="EUR"> EUR </label>
+												</div>
+												<div class="">
+													<input type="text" id="CAD" size="5" value="0" onchange="cadfunc()" />
+													<label for="CAD"> CAD </label>
+												</div>
+
 											</div>
 											<!-- 
 											<div class="card-action" style="background-color: transparent;">
@@ -189,9 +194,9 @@ header("Pragma: no-cache");
 										 	$response = file_get_contents('https://apis.is/concerts');
 											$concerts = json_decode($response, true);
 											$x = 0; #num upcoming conert
-										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\');">';
+										 	echo '<article class="card small animated fadeInRight hidden" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\');">';
 											echo '	<div class="card-content">';
-											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
+											echo '		<span class="card-title activator grey-text text-darken-4">Concerts!</span>';
 											echo '		<p>';
 											echo "			Fun thing to do indoors! The next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
 											echo "		</p>"; 
