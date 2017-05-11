@@ -261,7 +261,7 @@ header("Pragma: no-cache");
 											<p style="vertical-align: bottom;">
 												
 												<a href="//re.is/day-tours/northern-lights-tour" target="_blank">Bus tour with Reykjavik Excursions</a>
-											<p>
+											</p>
 										</article>
 										<article class="card small animated fadeInRight hidden">
 											<div class="card-content">
