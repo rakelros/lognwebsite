@@ -125,7 +125,7 @@ header("Pragma: no-cache");
 											$forecast = json_decode($response, true);
 											$time = 6;  # hom many entries into the future
 											$image = "./assets/weather/cloudy.png";
-										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$image.'\');">';
+										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$image.'\'); background-size: cover;">';
 											echo '	<div class="card-content">';
 											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
 											echo '		<p>';
