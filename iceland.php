@@ -188,9 +188,9 @@ header("Pragma: no-cache");
 												<span class="card-title activator grey-text text-darken-4" style="color:black;">It's cold outside</span>
 											</div>
 											<p>
-												<div style="vertical-align: bottom; color:black;"><a href="//66north.com/" target="_blank">Get a warm jackett</a>
-											</div>
-
+												<div style="vertical-align: bottom;">
+													<a href="//66north.com/" target="_blank"  style="color:black;">Get a warm jackett</a>
+												</div>
 											</p>
 										</article>
 									</div>
