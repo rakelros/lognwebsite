@@ -189,7 +189,7 @@ header("Pragma: no-cache");
 										 	$response = file_get_contents('https://apis.is/concerts');
 											$concerts = json_decode($response, true);
 											$x = 0; #num upcoming conert
-										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\');">';
+										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\'); background-size: cover;">';
 											echo '	<div class="card-content">';
 											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
 											echo '		<p>';
