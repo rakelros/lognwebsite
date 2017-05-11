@@ -183,17 +183,21 @@ header("Pragma: no-cache");
 									<p class="contentdesc">Please check the forecast of the places you travel to for sporatic and rough weather.</p>
 									<a class="special seemore">See more</a>
 									<div class="features">
-										<article class="card small animated fadeInRight hidden" >
+										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/safe-car2.jpg'); background-size: cover;">
 											<div class="card-content">
+												<span class="card-title activator grey-text text-darken-4">Use the safest cars</span>
+											</div>
+											<p>
 												<script type="text/javascript" src="http://vedur.is/js/iframe.js"></script>
 												<script type="text/javascript"><!--
 												VI.ifrm.type = 'wst';
-												VI.ifrm.area = 1;
-												VI.ifrm.lang = 'en';
+												VI.ifrm.area = 2;
+												VI.ifrm.lang = 'is';
 												VI.ifrm.displayWeather();
 												//-->
 												</script>
-											</div>
+
+											</p>
 										</article>
 									</div>
 								</div>
@@ -202,16 +206,6 @@ header("Pragma: no-cache");
 									<p class="contentdesc">Please take precautions on the road and keep away from oncoming traffic, animals and weather conditions.</p>
 									<a class="special seemore">See more</a>
 									<div class="features">
-										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/safe-car2.jpg'); background-size: cover;">
-											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">Use the safest cars</span>
-											</div>
-											<p>
-												<div style="vertical-align: bottom;"><a href="//avis.is/" target="_blank">Rent a car from Avis</a>
-											</div>
-
-											</p>
-										</article>
 										<article class="card small animated fadeInRight hidden">
 											<div class="card-content">
 												<span class="card-title activator grey-text text-darken-4">This is an ad :)</span>
