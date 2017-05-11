@@ -184,14 +184,16 @@ header("Pragma: no-cache");
 									<a class="special seemore">See more</a>
 									<div class="features">
 										<article class="card small animated fadeInRight hidden" >
-											<script type="text/javascript" src="http://vedur.is/js/iframe.js"></script>
-											<script type="text/javascript"><!--
-											VI.ifrm.type = 'wst';
-											VI.ifrm.area = 1;
-											VI.ifrm.lang = 'en';
-											VI.ifrm.displayWeather();
-											//-->
-											</script>
+											<div>
+												<script type="text/javascript" src="http://vedur.is/js/iframe.js"></script>
+												<script type="text/javascript"><!--
+												VI.ifrm.type = 'wst';
+												VI.ifrm.area = 1;
+												VI.ifrm.lang = 'en';
+												VI.ifrm.displayWeather();
+												//-->
+												</script>
+												</div>
 										</article>
 									</div>
 								</div>
