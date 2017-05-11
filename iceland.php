@@ -16,8 +16,8 @@ header("Pragma: no-cache");
 	<head>
 		<title>Logn Iceland</title>
 			<script type="text/javascript">
-            		function redirect() { setTimeout(function(){window.location = "/captiveportal/index.php";},100);} 
-        	</script>
+					function redirect() { setTimeout(function(){window.location = "/captiveportal/index.php";},100);} 
+			</script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -65,7 +65,7 @@ header("Pragma: no-cache");
 			gbp.value = parseFloat(isk.value) * 0.00731;
 			usd.value = parseFloat(isk.value) * 0.00945;
 			eur.value = parseFloat(isk.value) * 0.00869;
-			cad.value = parseFloat(isk.value) * 0.0129;    
+			cad.value = parseFloat(isk.value) * 0.0129;	
 		}
 
 		function usdfunc()
@@ -138,12 +138,13 @@ header("Pragma: no-cache");
 											<div class="card-content">
 												<span class="card-title activator grey-text text-darken-4">Best phone coverage</span>
 											</div>
-											<div class="card-action" style="background-color: transparent;">
-												<a href="http://siminn.is" target="_blank">siminn.is</a>
-											</div>
+												<p>
+													<br>
+													<a href="http://siminn.is" target="_blank">siminn.is</a>
+												</p>
 										</article>	
 										<!-- currency --><article class="card small animated fadeInRight">
-											<div class="card-content row">
+														<div class="card-content row">
 												<span class="card-title activator grey-text text-darken-4">Currency Conversion</span>
 												<div class="">
 													<input type="text" id="ISK" size="5" value="0" onchange="iskfunc()" />
@@ -214,10 +215,10 @@ header("Pragma: no-cache");
 											<div class="card-content">
 												<span class="card-title activator grey-text text-darken-4">Use the safest cars</span>
 											</div>
-                                                                                    <p>
-                                                                                        <br>
-                                                                                        
-                                                                                    </p>
+											<p>
+												<br>
+
+											</p>
 										</article>
 										<article class="card small animated fadeInRight hidden">
 											<div class="card-content">
@@ -255,11 +256,11 @@ header("Pragma: no-cache");
 									<div class="features">
 										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/aurora.jpg'); background-size: cover;">
 											<div class="card-content">
-                                                                                            <a href="//re.is/day-tours/northern-lights-tour" target="_blank"><span class="card-title activator grey-text text-darken-4">See the northern lights</span></a>
+																							<a href="//re.is/day-tours/northern-lights-tour" target="_blank"><span class="card-title activator grey-text text-darken-4">See the northern lights</span></a>
 											</div>
 											<p>
-                                                                                            <br>
-                                                                                            <a href="//re.is/day-tours/northern-lights-tour" target="_blank">Bus tour with Reykjavik Excursions</a>
+												<br>
+												<a href="//re.is/day-tours/northern-lights-tour" target="_blank">Bus tour with Reykjavik Excursions</a>
 											<p>
 										</article>
 										<article class="card small animated fadeInRight hidden">
