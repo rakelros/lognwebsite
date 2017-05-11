@@ -183,28 +183,21 @@ header("Pragma: no-cache");
 									<p class="contentdesc">Please check the forecast of the places you travel to for sporatic and rough weather.</p>
 									<a class="special seemore">See more</a>
 									<div class="features">
-										<article class="card small animated fadeInRight hidden">
-											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
-											</div>
-											<div class="card-action">
-												<a href="#">Advert link</a>
-												<a href="#">Advert link</a>
-											</div>
-										</article>
 										<!-- concerts -->
 										 <?php 
 										 	$response = file_get_contents('https://apis.is/concerts');
 											$concerts = json_decode($response, true);
-											$x = 0; #num upcoming conert
-										 	echo '<article class="card small animated fadeInRight hidden" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\'); background-size: cover;">';
-											echo '<div class="card-content">';
-											echo '<span class="card-title activator grey-text text-darken-4">Concerts!</span>';
-											echo '<p>';
-											echo "Fun thing to do indoors! The next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
-											echo "</p>"; 
-											echo "</div>";
-											echo "</article>";
+											$maxnum = 3;
+											for ($x = 0; $x <= $maxnum; $x++){
+												echo '<article class="card small animated fadeInRight hidden" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\'); background-size: cover;">';
+												echo '<div class="card-content">';
+												echo '<span class="card-title activator grey-text text-darken-4">Concerts!</span>';
+												echo '<p>';
+												echo "Fun thing to do indoors! The next concert in Iceland is ".$concerts['results'][$x]["eventDateName"]." and is in ".$concerts['results'][$x]["eventHallName"]." at ".gmdate('H:i, d. M Y',strtotime($concerts['results'][$x]["dateOfShow"]));
+												echo "</p>"; 
+												echo "</div>";
+												echo "</article>";
+											}
 										?>
 									</div>
 								</div>
