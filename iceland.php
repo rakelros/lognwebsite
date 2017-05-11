@@ -125,7 +125,7 @@ header("Pragma: no-cache");
 											$forecast = json_decode($response, true);
 											$time = 6;  # hom many entries into the future
 											$image = "./assets/weather/cloudy.png";
-										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$image.'\');">';
+										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$image.'\'); background-size: cover;">';
 											echo '	<div class="card-content">';
 											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
 											echo '		<p>';
@@ -189,12 +189,12 @@ header("Pragma: no-cache");
 												<a href="#">Advert link</a>
 											</div>
 										</article>
-										<!-- weather -->
+										<!-- concerts -->
 										 <?php 
 										 	$response = file_get_contents('https://apis.is/concerts');
 											$concerts = json_decode($response, true);
 											$x = 0; #num upcoming conert
-										 	echo '<article class="card small animated fadeInRight hidden" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\');">';
+										 	echo '<article class="card small animated fadeInRight hidden" style="background-image: url(\''.$concerts['results'][$x]['imageSource'].'\'); background-size: cover;">';
 											echo '	<div class="card-content">';
 											echo '		<span class="card-title activator grey-text text-darken-4">Concerts!</span>';
 											echo '		<p>';
@@ -210,14 +210,14 @@ header("Pragma: no-cache");
 									<p class="contentdesc">Please take precautions on the road and keep away from oncoming traffic, animals and weather conditions.</p>
 									<a class="special seemore">See more</a>
 									<div class="features">
-										<article class="card small animated fadeInRight hidden">
+										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/safe-car2.jpg'); background-size: cover;">
 											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">This is not an ad :D</span>
+												<span class="card-title activator grey-text text-darken-4">Use the safest cars</span>
 											</div>
-											<div class="card-action">
-												<a href="#">Advert link</a>
-												<a href="#">Advert link</a>
-											</div>
+                                                                                    <p>
+                                                                                        <br>
+                                                                                        
+                                                                                    </p>
 										</article>
 										<article class="card small animated fadeInRight hidden">
 											<div class="card-content">
@@ -253,14 +253,14 @@ header("Pragma: no-cache");
 									<p class="contentdesc">Please preserve Icelandic moss as it is delicate and takes hundreds of years to grow back.</p>
 									<a class="special seemore">See more</a>
 									<div class="features">
-										<article class="card small animated fadeInRight hidden">
+										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/aurora.jpg'); background-size: cover;">
 											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
+                                                                                            <a href="//re.is/day-tours/northern-lights-tour" target="_blank"><span class="card-title activator grey-text text-darken-4">See the northern lights</span></a>
 											</div>
-											<div class="card-action">
-												<a href="#">Advert link</a>
-												<a href="#">Advert link</a>
-											</div>
+											<p>
+                                                                                            <br>
+                                                                                            <a href="//re.is/day-tours/northern-lights-tour" target="_blank">Bus tour with Reykjavik Excursions</a>
+											<p>
 										</article>
 										<article class="card small animated fadeInRight hidden">
 											<div class="card-content">
