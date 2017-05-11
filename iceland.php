@@ -85,7 +85,7 @@ header("Pragma: no-cache");
 												<span class="card-title activator grey-text text-darken-4">Best phone coverage</span>
 											</div>
 											<div class="card-action" style="background-color: transparent;">
-												<a href="http://siminn.is">siminn.is</a>
+												<a href="http://siminn.is" target="_blank">siminn.is</a>
 											</div>
 										</article>	
 										<!-- currency --><article class="card small animated fadeInRight">
@@ -96,7 +96,7 @@ header("Pragma: no-cache");
 												<p>Iceland: 1IDK<br>Your country: 5CAD</p>
 												<!-- PLEASE PLEASE AND THNAK YOU :D -->
 											</div>
-											<div class="card-action">
+											<div class="card-action" style="background-color: transparent;">
 												<a href="#">Currency conversion</a>
 											</div>
 										</article>										
