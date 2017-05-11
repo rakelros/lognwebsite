@@ -250,7 +250,7 @@ header("Pragma: no-cache");
 									<div class="features">
 										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/aurora.jpg'); background-size: cover;">
 											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">See the northern lights</span>
+                                                                                            <a href="//re.is"><span class="card-title activator grey-text text-darken-4">See the northern lights</span></a>
 											</div>
 											<p>
 											
