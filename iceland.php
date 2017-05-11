@@ -1,5 +1,5 @@
-<?php # $destination = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['HTTP_URI'] . ""; ?>
-<?php  $destination = "http://lognweb.herokuapp.com/iceland.html"; ?>
+<?php  $destination = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['HTTP_URI'] . ""; ?>
+<?php  #$destination = "http://lognweb.herokuapp.com/iceland.html"; ?>
 <?php
 # prevent cache
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
