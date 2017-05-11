@@ -1,6 +1,4 @@
-<?php  $destination = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['HTTP_URI'] . ""; ?>
-<?php  #$destination = "http://lognweb.herokuapp.com/iceland.html"; ?>
-<?php
+<?php  $destination = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['HTTP_URI'] . "";
 # prevent cache
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
@@ -294,7 +292,7 @@ header("Pragma: no-cache");
 							</p>
 							<form method="post" action="/captiveportal/index.php" onsubmit="redirect()">
 								<ul class="actions">
-									<input type="hidden" name="target" value="<?=$destination?>">
+									<?php echo '<input type="hidden" name="target" value="'.$destination.'">';?>
 									<button type="submit">Wunderbar</button>
 								</ul>
 							</form>
