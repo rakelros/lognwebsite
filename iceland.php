@@ -184,7 +184,7 @@ header("Pragma: no-cache");
 												<a href="#">Advert link</a>
 											</div>
 										</article>
-										<!-- weather -->
+										<!-- concerts -->
 										 <?php 
 										 	$response = file_get_contents('https://apis.is/concerts');
 											$concerts = json_decode($response, true);
@@ -248,14 +248,13 @@ header("Pragma: no-cache");
 									<p class="contentdesc">Please preserve Icelandic moss as it is delicate and takes hundreds of years to grow back.</p>
 									<a class="special seemore">See more</a>
 									<div class="features">
-										<article class="card small animated fadeInRight hidden">
+										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/aurora.jpg'); background-size: cover;">
 											<div class="card-content">
-												<span class="card-title activator grey-text text-darken-4">Sed feugiat lorem</span>
+												<span class="card-title activator grey-text text-darken-4">See the northern lights</span>
 											</div>
-											<div class="card-action">
-												<a href="#">Advert link</a>
-												<a href="#">Advert link</a>
-											</div>
+											<p>
+											
+											<p>
 										</article>
 										<article class="card small animated fadeInRight hidden">
 											<div class="card-content">
