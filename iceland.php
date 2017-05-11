@@ -183,7 +183,14 @@ header("Pragma: no-cache");
 									<p class="contentdesc">Please check the forecast of the places you travel to for sporatic and rough weather.</p>
 									<a class="special seemore">See more</a>
 									<div class="features">
-										
+										<script type="text/javascript" src="http://vedur.is/js/iframe.js"></script>
+										<script type="text/javascript"><!--
+										VI.ifrm.type = 'wst';
+										VI.ifrm.area = 1;
+										VI.ifrm.lang = 'en';
+										VI.ifrm.displayWeather();
+										//-->
+										</script>
 									</div>
 								</div>
 								<div class="content animated fadeIn">
