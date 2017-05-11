@@ -295,7 +295,7 @@ header("Pragma: no-cache");
 							<form method="post" action="/captiveportal/index.php" onsubmit="redirect()">
 								<ul class="actions">
 									<input type="hidden" name="target" value="<?=$destination?>">
-									<button type="submit">Sign into WiFi</button>
+									<button type="submit">Wunderbar</button>
 								</ul>
 							</form>
 							<ul class="copyright">
