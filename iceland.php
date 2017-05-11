@@ -250,10 +250,10 @@ header("Pragma: no-cache");
 									<div class="features">
 										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/aurora.jpg'); background-size: cover;">
 											<div class="card-content">
-                                                                                            <a href="//re.is"><span class="card-title activator grey-text text-darken-4">See the northern lights</span></a>
+                                                                                            <a href="//re.is/day-tours/northern-lights-tour" target="_blank"><span class="card-title activator grey-text text-darken-4">See the northern lights</span></a>
 											</div>
 											<p>
-											
+                                                                                            <a href="//re.is/day-tours/northern-lights-tour" target="_blank">Bus tour with Reykjavik Excursions</a>
 											<p>
 										</article>
 										<article class="card small animated fadeInRight hidden">
