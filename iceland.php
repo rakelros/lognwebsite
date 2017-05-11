@@ -80,11 +80,10 @@ header("Pragma: no-cache");
 											echo "	</div>";
 											echo "</article>";
 										?>
-										<!-- sim card --><article class="card small animated fadeInRight">
+										<!-- sim card --><article class="card small animated fadeInRight" style="background-image: url('./images/coverage.png');">
 											<div class="card-content">
 												<span class="card-title activator grey-text text-darken-4">Best phone coverage</span>
 											</div>
-											<img src="./images/coverage.png" style="width:100%;height:100%;">
 											<div class="card-action">
 												<a href="http://siminn.is">siminn.is</a>
 												<a href="#">Advert link</a>
