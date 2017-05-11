@@ -258,9 +258,9 @@ header("Pragma: no-cache");
 											<div class="card-content">
 												<a href="//re.is/day-tours/northern-lights-tour" target="_blank"><span class="card-title activator grey-text text-darken-4">See the northern lights</span></a>
 											</div>
-											<p style="vertical-align: bottom;">
+											<p>
 												
-												<a href="//re.is/day-tours/northern-lights-tour" target="_blank">Bus tour with Reykjavik Excursions</a>
+												<a href="//re.is/day-tours/northern-lights-tour" target="_blank"  style="vertical-align: bottom;">Bus tour with Reykjavik Excursions</a>
 											</p>
 										</article>
 										<article class="card small animated fadeInRight hidden">
