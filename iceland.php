@@ -185,10 +185,10 @@ header("Pragma: no-cache");
 									<div class="features">
 										<article class="card small animated fadeInRight hidden" style="background-image: url('./images/66.jpg'); background-size: cover;">
 											<div class="card-content">
-												<span class="card-title activator black-text text-darken-4">It's cold outside</span>
+												<span class="card-title activator grey-text text-darken-4" style="color:black;">It's cold outside</span>
 											</div>
 											<p>
-												<div style="vertical-align: bottom;"><a href="//66north.com/" target="_blank">Get a warm jackett</a>
+												<div style="vertical-align: bottom; color:black;"><a href="//66north.com/" target="_blank">Get a warm jackett</a>
 											</div>
 
 											</p>
