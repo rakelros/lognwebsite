@@ -1,5 +1,5 @@
 <?php # $destination = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['HTTP_URI'] . ""; ?>
-<?php # $destination = "http://lognweb.herokuapp.com/iceland.html"; ?>
+<?php  $destination = "http://lognweb.herokuapp.com/iceland.html"; ?>
 <?php
 # prevent cache
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
@@ -70,7 +70,7 @@ header("Pragma: no-cache");
 										 	$response = file_get_contents('https://apis.is/weather/forecasts/en?stations=1');
 											$forecast = json_decode($response, true);
 											$time = 6;  # hom many entries into the future
-											$image = "./assets/weather/small.png";
+											$image = "./assets/weather/cloudy.png";
 										 	echo '<article class="card small animated fadeInRight" style="background-image: url(\''.$image.'\');">';
 											echo '	<div class="card-content">';
 											echo '		<span class="card-title activator grey-text text-darken-4">Weather in Reykjavík</span>';
@@ -86,7 +86,6 @@ header("Pragma: no-cache");
 											</div>
 											<div class="card-action">
 												<a href="http://siminn.is">siminn.is</a>
-												<a href="#">Advert link</a>
 											</div>
 										</article>	
 										<!-- currency --><article class="card small animated fadeInRight">
